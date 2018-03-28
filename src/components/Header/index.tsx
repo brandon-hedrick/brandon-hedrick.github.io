@@ -13,12 +13,12 @@ const Header = () => (
   >
     <div
       style={{
-        padding: '1.5rem 2.5rem',
+        padding: '1.5rem 4rem 1.5rem 7.25rem',
         display: 'flex',
         alignItems: 'baseline',
         justifyContent: 'space-between',
         backgroundColor: Colors.white,
-        height: '5rem'
+        height: '6.25rem'
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -44,7 +44,7 @@ const Header = () => (
             style={{
               ...Typography.headerNav,
               textDecoration: 'none',
-              marginLeft: '2.5rem'
+              marginLeft: '1rem'
             }}
           >About</Link>
         </li>

@@ -10,7 +10,7 @@ const TypographyPage = () => (
   }}>
     <div style={{
       width: '100%',
-      padding: '6rem 2.5rem 1.5rem 2.5rem',
+      padding: '8.25rem 4rem 4rem 7.25rem',
     }}>
       <h2 style={Typography.headerNav}>Light Typography</h2>
       <span>Logo Title</span>
@@ -26,7 +26,7 @@ const TypographyPage = () => (
     </div>
     <div style={{
       width: '100%',
-      padding: '2rem 2.5rem 1.5rem 2.5rem',
+      padding: '2rem 4rem',
       backgroundColor: Colors.darkGrey
     }}>
       <h2 style={Typography.darkTitle}>Dark Typography</h2>
