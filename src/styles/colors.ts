@@ -1,19 +1,11 @@
-const white = '#FFFFFF';
+export const Colors: any = {};
 
-const lightGrey = '#F2F2F2';
-const grey = '#CCCCCC';
-const mediumGrey = '#4D4D4D';
-const deepGrey = '#333333';
-const darkGrey = '#1A1A1A';
+Colors.white = '#FFFFFF';
 
-const black = '#000000';
+Colors.lightGrey = '#F2F2F2';
+Colors.grey = '#CCCCCC';
+Colors.mediumGrey = '#4D4D4D';
+Colors.deepGrey = '#333333';
+Colors.darkGrey = '#1A1A1A';
 
-export const Colors = {
-  white,
-  lightGrey,
-  grey,
-  mediumGrey,
-  deepGrey,
-  darkGrey,
-  black
-}
+Colors.black = '#000000';
