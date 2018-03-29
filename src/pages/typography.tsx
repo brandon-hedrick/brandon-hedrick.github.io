@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyledTypography, Typography } from '../styles/typography'
+import { StyledTypography } from '../styles/typography'
 import { Colors } from '../styles/colors';
 import styled from 'styled-components';
 
