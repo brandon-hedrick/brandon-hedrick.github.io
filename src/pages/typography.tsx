@@ -1,41 +1,79 @@
 import * as React from 'react'
-import { Typography } from '../styles/typography';
+import { StyledTypography, Typography } from '../styles/typography'
 import { Colors } from '../styles/colors';
+import styled from 'styled-components';
 
 const TypographyPage = () => (
-  <div style= {{
-    display: 'flex',
-    height: '100vh',
-    justifyContent: 'stretch'
-  }}>
-    <div style={{
-      width: '100%',
-      padding: '8.25rem 4rem 4rem 7.25rem',
-    }}>
-      <h2 style={Typography.headerNav}>Light Typography</h2>
-      <span>Logo Title</span>
-      <h1 style={Typography.logoTitle}>Brandon Hedrick</h1>
-      <span>Header Nav</span>
-      <h4 style={Typography.headerNav}>About     Skills      Work</h4>
-      <span>Page Title</span>
-      <h2 style={Typography.pageTitle}>Skills</h2>
-      <span>Page Subtitle</span>
-      <h3 style={Typography.pageSubtitle}>I'm a Javascript Developer RxJs</h3>
-      <span>Standard Paragraph</span>
-      <p style={Typography.paragraph}>When I first began work in 2014, I was introduced to several, powerful new tools: Jade, Sass, and Grunt/Gulp. These were amazing new tools to me that I used to streamline my workflow in ways I could only dream of previously.</p>
-    </div>
-    <div style={{
-      width: '100%',
-      padding: '2rem 4rem',
-      backgroundColor: Colors.darkGrey
-    }}>
-      <h2 style={Typography.darkTitle}>Dark Typography</h2>
-      <span style={{color: Colors.lightGrey}}>Dark Title</span>
-      <h1 style={Typography.darkTitle}>I Know...</h1>
-      <span style={{color: Colors.lightGrey}}>Dark Heading</span>
-      <h2 style={Typography.darkHeading}>RxJs</h2>
-    </div>
-  </div>  
+  <Wrapper>
+    <LightColumn>
+      <LogoTitle>Logo Title</LogoTitle>
+      <HeaderLink>Header Navigation</HeaderLink>
+      <PageTitle>Page Title</PageTitle>
+      <PageSubtitle>Page Subtitle</PageSubtitle>
+      <Paragraph>Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a sagittis enim. Nullam venenatis gravida efficitur. Phasellus tortor eros, semper eu consequat sit amet, fringilla ac eros. Nullam a suscipit mauris. Suspendisse sem elit, rutrum eu ante id, facilisis faucibus quam. Fusce id leo vitae tortor laoreet accumsan. Sed pulvinar lobortis est, vitae venenatis nibh vestibulum a. Quisque gravida, nibh nec mollis imperdiet, metus mauris malesuada magna, sed tempor purus risus id velit.</Paragraph>
+    </LightColumn>
+    <DarkColumn>
+      <DarkTitle>Dark Title</DarkTitle>
+      <DarkHeading>Dark Heading</DarkHeading>
+    </DarkColumn>
+  </Wrapper>  
 )
+
+/* 
+PAGE STYLES:
+Ideally this will never happen as the styling will happen at the component
+level with _very_ minimal stlying happening on a page level template 
+*/
+
+const Wrapper = styled.div`
+  display: flex;
+  height: 100vh;
+  justify-content: stretch;
+`
+
+const Column = styled.div`
+  width: 100%;
+`
+
+const LightColumn = Column.extend`
+  padding: 8.25rem 4rem 4rem 7.25rem;
+`
+
+const DarkColumn = Column.extend`
+  padding: 2rem 4rem;
+  background-color: ${Colors.darkGrey}
+`
+
+const DarkSpan = styled.span`
+  color: ${Colors.lightGrey}
+`
+
+const LogoTitle = styled.h1`
+  ${StyledTypography.logoTitle}
+`
+
+const HeaderLink = styled.h4`
+  ${StyledTypography.headerNav}
+`
+
+const PageTitle = styled.h2`
+  ${StyledTypography.pageTitle}
+`
+
+const PageSubtitle = styled.h3`
+  ${StyledTypography.pageSubtitle}
+`
+
+const Paragraph = styled.p`
+  ${StyledTypography.paragraph}
+`
+
+const DarkTitle = styled.h4`
+  ${StyledTypography.darkTitle}
+`
+
+const DarkHeading = styled.h5`
+  ${StyledTypography.darkHeading}
+`
 
 export default TypographyPage

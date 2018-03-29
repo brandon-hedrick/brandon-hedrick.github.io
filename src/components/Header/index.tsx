@@ -1,76 +1,27 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
-import { Colors } from '../../styles/colors'
-import { Typography } from '../../styles/typography'
+import { HeaderContainer, HeaderContent, LogoTitleWrapper, LogoTitle, NavigationList, NavigationListItem, HeaderLink , FirstHeaderLink } from './styled'
 
 const Header = () => (
-  <div
-    style={{
-      position: 'fixed',
-      top: 0,
-      width: '50%',
-    }}
-  >
-    <div
-      style={{
-        padding: '1.5rem 4rem 1.5rem 7.25rem',
-        display: 'flex',
-        alignItems: 'baseline',
-        justifyContent: 'space-between',
-        backgroundColor: Colors.white,
-        height: '6.25rem'
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            ...Typography.logoTitle,
-            textDecoration: 'none',
-          }}
-        >
-          Brandon Hedrick
-        </Link>
-      </h1>
-      <ul style={{
-        listStyle: 'none',
-        display: 'flex',
-        margin: '0',
-        justifyContent: 'flex-end'
-      }}>
-        <li style={{margin: 0}}>
-          <Link 
-            to="/"
-            style={{
-              ...Typography.headerNav,
-              textDecoration: 'none',
-              marginLeft: '1rem'
-            }}
-          >About</Link>
-        </li>
-        <li style={{margin: 0}}>
-          <Link 
-            to="/"
-            style={{
-              ...Typography.headerNav,
-              textDecoration: 'none',
-              marginLeft: '2.5rem'
-            }}
-          >Skills</Link>
-        </li>
-        <li style={{margin: 0}}>
-          <Link 
-            to="/"
-            style={{
-              ...Typography.headerNav,
-              textDecoration: 'none',
-              marginLeft: '2.5rem'
-            }}
-          >Work</Link>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <HeaderContainer>
+    <HeaderContent>
+      <LogoTitleWrapper>
+        <LogoTitle to="/">Brandon Hedrick</LogoTitle>
+      </LogoTitleWrapper>
+      <nav>
+        <NavigationList>
+          <NavigationListItem>
+            <FirstHeaderLink to='/'>About</FirstHeaderLink>
+          </NavigationListItem>
+          <NavigationListItem>
+            <HeaderLink to='/'>Skills</HeaderLink>
+          </NavigationListItem>
+          <NavigationListItem>
+            <HeaderLink to='/'>Work</HeaderLink>
+          </NavigationListItem>
+        </NavigationList>
+      </nav>
+    </HeaderContent>
+  </HeaderContainer>
 )
 
 export default Header
