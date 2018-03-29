@@ -5,7 +5,11 @@ import Header from '../components/Header'
 import './index.css'
 import '../assets/fonts/stylesheet.css'
 
-const TemplateWrapper = ({ children }) => (
+interface TemplateWrapperProps {
+  children: any;
+}
+
+const TemplateWrapper: React.SFC<TemplateWrapperProps> = ({ children }) => (
   <div>
     <Helmet
       title="Brandon Hedrick"
