@@ -13,10 +13,10 @@ const Header = () => (
             <FirstHeaderLink to='/'>About</FirstHeaderLink>
           </NavigationListItem>
           <NavigationListItem>
-            <HeaderLink to='/'>Skills</HeaderLink>
+            <HeaderLink to='/skills'>Skills</HeaderLink>
           </NavigationListItem>
           <NavigationListItem>
-            <HeaderLink to='/'>Work</HeaderLink>
+            <HeaderLink to='/work'>Work</HeaderLink>
           </NavigationListItem>
         </NavigationList>
       </nav>

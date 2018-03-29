@@ -3,7 +3,7 @@ import SplitLayout from '../components/SplitLayout'
 
 const LightCol = () => (
   <h1>
-    AboutPage
+    SkillsPage
   </h1>
 )
 
@@ -12,7 +12,7 @@ const DarkCol = () => (
   </div>
 )
 
-const AboutPage = () => (
+const SkillsPage = () => (
   <SplitLayout
     light={
       <LightCol/>
@@ -23,4 +23,4 @@ const AboutPage = () => (
   />
 )
 
-export default AboutPage
+export default SkillsPage

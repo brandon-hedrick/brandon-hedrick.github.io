@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Wrapper, LightColumn, DarkColumn } from './styled'
 
 interface SplitLayoutProps {
-  light: React.SFC,
-  dark: React.SFC;
+  light: any,
+  dark: any;
 }
 
 const SplitLayout: React.SFC<SplitLayoutProps> = ({ light, dark }) => (
