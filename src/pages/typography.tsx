@@ -38,7 +38,6 @@ Ideally this will never happen as the styling will happen at the component
 level with _very_ minimal stlying happening on a page level template 
 */
 
-
 const DarkSpan = styled.span`
   color: ${Colors.lightGrey}
 `
