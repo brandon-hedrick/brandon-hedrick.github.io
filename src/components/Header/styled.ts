@@ -1,10 +1,6 @@
 import { Colors } from '../../styles/colors'
 import { StyledTypography } from '../../styles/typography'
 import styled from 'styled-components';
-
-import TwitterIcon from '../icons/TwitterIcon';
-import GithubIcon from '../icons/GitHubIcon';
-import LinkedInIcon from '../icons/LinkedInIcon';
 import Link from 'gatsby-link'
 
 export const HeaderContainer = styled.div`
