@@ -1,5 +1,8 @@
 import * as React from 'react'
-import { HeaderContainer, HeaderContent, LogoTitleWrapper, LogoTitle, NavigationList, NavigationListItem, HeaderLink , FirstHeaderLink } from './styled'
+import { 
+  HeaderContainer, HeaderContent, LogoTitleWrapper, LogoTitle, NavigationList, NavigationListItem, HeaderLink , 
+  FirstHeaderLink
+} from './styled'
 
 const Header = () => (
   <HeaderContainer>
