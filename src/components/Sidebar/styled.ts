@@ -9,7 +9,11 @@ import LinkedInIcon from '../icons/LinkedInIcon';
 // icon styling
 const svgStyling = `
   fill: ${Colors.grey};
-  width: 2rem
+  width: 2rem;
+  transition: fill 0.25s ease
+  &:hover {
+    fill: ${Colors.mediumGrey};
+  }
 `
 
 export const StyledTwitterIcon = styled(TwitterIcon)`${svgStyling}`

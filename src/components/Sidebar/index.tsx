@@ -6,9 +6,15 @@ const SideBar = () => (
   <SideBarWrapper>
     <SideBarSocialWrapper>
       <SideBarSocial>
-        <StyleLinkedInIcon/>
-        <StyledGithubIcon/>
-        <StyledTwitterIcon/>
+        <a href='https://www.linkedin.com/in/blhedrick/' target='_blank'>
+          <StyleLinkedInIcon/>
+        </a>
+        <a href='https://github.com/brandon-hedrick/' target='_blank'>
+          <StyledGithubIcon/>
+        </a>
+        <a href='https://twitter.com/BLHedrick' target='_blank'>
+          <StyledTwitterIcon/>
+        </a>
       </SideBarSocial>
     </SideBarSocialWrapper>
   </SideBarWrapper>
