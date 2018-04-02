@@ -1,10 +1,9 @@
 import * as React from 'react'
 import SplitLayout from '../components/SplitLayout'
+import TitularLayout from '../components/TitularLayout'
 
 const LightCol = () => (
-  <h1>
-    WorkPage
-  </h1>
+  <TitularLayout title={'Work'} subtitle={"I like making cool stuff"}/>
 )
 
 const DarkCol = () => (

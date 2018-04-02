@@ -2,8 +2,6 @@ import { Colors } from './colors';
 import styled from 'styled-components';
 import { ComponentType } from 'react';
 
-export const Typography: any = {};
-
 const butler = {
   black: 'butlerblack',
   medium: 'butlermedium'
@@ -34,7 +32,7 @@ StyledTypography.pageTitle = `
 StyledTypography.pageSubtitle = `
   font-family: ${titillium}}};
   color: ${Colors.mediumGrey}}};
-  font-size: 3.75rem;
+  font-size: 3.5rem;
 `
 
 StyledTypography.paragraph = `
