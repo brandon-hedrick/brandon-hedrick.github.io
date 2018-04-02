@@ -16,6 +16,5 @@ export const LightColumn = Column.extend`
 `
 
 export const DarkColumn = Column.extend`
-  padding: 2rem 4rem;
   background-color: ${Colors.darkGrey}
 `
