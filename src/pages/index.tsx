@@ -1,33 +1,35 @@
-import * as React from 'react'
-import styled from 'styled-components'
+import * as React from 'react';
+import styled from 'styled-components';
 
-import Img from "gatsby-image";
-import SplitLayout from '../components/SplitLayout'
-import TitularLayout from '../components/TitularLayout'
+import Img from 'gatsby-image';
+import SplitLayout from '../components/SplitLayout';
+import TitularLayout from '../components/TitularLayout';
 
 interface HeroImage {
-  sizes: object
+  sizes: object;
 }
 interface AboutPageProps {
   data: {
-    heroImage: HeroImage
-  }
+    heroImage: HeroImage;
+  };
 }
 
 interface DarkColProps {
-  heroImage: HeroImage
+  heroImage: HeroImage;
 }
 
+// to avoid linting error using mixed quotes in jsx  with ts
+const subtitle = 'I\'m a Javascript developer';
+
 const LightCol = () => (
-  <TitularLayout title={'About'} subtitle={"I\'m a Javascript developer"}/>
-)
+  <TitularLayout title={'About'} subtitle={subtitle}/>
+);
 
 const DarkCol: React.SFC<DarkColProps> = ({ heroImage }) => (
   <div>
     <HeroImage sizes={heroImage.sizes} />
   </div>
-)
-
+);
 
 const AboutPage: React.SFC<AboutPageProps> = ({ data }) => (
   <SplitLayout
@@ -38,9 +40,9 @@ const AboutPage: React.SFC<AboutPageProps> = ({ data }) => (
     <DarkCol heroImage={data.heroImage}/>
   }
   />
-)
+);
 
-export default AboutPage
+export default AboutPage;
 
 export const query = graphql`
   query IndexQuery {
@@ -54,4 +56,4 @@ export const query = graphql`
 
 const HeroImage = styled(Img)`
   height: 100vh;
-`
+`;

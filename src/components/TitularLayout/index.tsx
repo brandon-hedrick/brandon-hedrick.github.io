@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { TitularLayoutWrapper, Title, Subtitle } from './styled'
+
+import { TitularLayoutWrapper, Title, Subtitle } from './styled';
 
 interface TitularLayoutProps {
   title: string;
@@ -14,6 +15,6 @@ const TitularLayout: React.SFC<TitularLayoutProps> = ({title, subtitle}) => (
       <Subtitle>{subtitle}</Subtitle>
     }
   </TitularLayoutWrapper>
-)
+);
 
-export default TitularLayout
+export default TitularLayout;

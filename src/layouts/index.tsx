@@ -1,10 +1,11 @@
-import * as React from 'react'
-import { Helmet } from 'react-helmet'
+import * as React from 'react';
 
-import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
-import './index.css'
-import '../assets/fonts/stylesheet.css'
+import { Helmet } from 'react-helmet';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+
+import './index.css';
+import '../assets/fonts/stylesheet.css';
 
 interface TemplateWrapperProps {
   children: any;
@@ -13,7 +14,7 @@ interface TemplateWrapperProps {
 const TemplateWrapper: React.SFC<TemplateWrapperProps> = ({ children }) => (
   <div>
     <Helmet
-      title="Brandon Hedrick"
+      title='Brandon Hedrick'
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -30,6 +31,6 @@ const TemplateWrapper: React.SFC<TemplateWrapperProps> = ({ children }) => (
       {children()}
     </div>
   </div>
-)
+);
 
-export default TemplateWrapper
+export default TemplateWrapper;

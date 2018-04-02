@@ -1,15 +1,16 @@
-import * as React from 'react'
-import SplitLayout from '../components/SplitLayout'
-import TitularLayout from '../components/TitularLayout'
+import * as React from 'react';
+
+import SplitLayout from '../components/SplitLayout';
+import TitularLayout from '../components/TitularLayout';
 
 const LightCol = () => (
-  <TitularLayout title={'Work'} subtitle={"I like making cool stuff"}/>
-)
+  <TitularLayout title={'Work'} subtitle={'I like making cool stuff'}/>
+);
 
 const DarkCol = () => (
   <div>
   </div>
-)
+);
 
 const WorkPage = () => (
   <SplitLayout
@@ -20,6 +21,6 @@ const WorkPage = () => (
       <DarkCol/>
     }
   />
-)
+);
 
-export default WorkPage
+export default WorkPage;

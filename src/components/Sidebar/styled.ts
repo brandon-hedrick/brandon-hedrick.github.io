@@ -1,10 +1,11 @@
-import { Colors } from '../../styles/colors'
-import { StyledTypography } from '../../styles/typography'
 import styled from 'styled-components';
 
 import TwitterIcon from '../icons/TwitterIcon';
 import GithubIcon from '../icons/GitHubIcon';
+
 import LinkedInIcon from '../icons/LinkedInIcon';
+import { Colors } from '../../styles/colors';
+import { StyledTypography } from '../../styles/typography';
 
 // icon styling
 const svgStyling = `
@@ -14,11 +15,11 @@ const svgStyling = `
   &:hover {
     fill: ${Colors.mediumGrey};
   }
-`
+`;
 
-export const StyledTwitterIcon = styled(TwitterIcon)`${svgStyling}`
-export const StyleLinkedInIcon = styled(LinkedInIcon)`${svgStyling}`
-export const StyledGithubIcon = styled(GithubIcon)`${svgStyling}`
+export const StyledTwitterIcon = styled(TwitterIcon)`${svgStyling}`;
+export const StyleLinkedInIcon = styled(LinkedInIcon)`${svgStyling}`;
+export const StyledGithubIcon = styled(GithubIcon)`${svgStyling}`;
 
 export const SideBarWrapper = styled.div`
   position: fixed;
@@ -28,7 +29,7 @@ export const SideBarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8.25rem 2.5rem 3rem;
-`
+`;
 
 export const SideBarSocialWrapper = styled.div`
   display: flex;
@@ -49,7 +50,7 @@ export const SideBarSocialWrapper = styled.div`
     width: .125em;
     background-color: ${Colors.grey};
   }
-`
+`;
 
 export const SideBarSocial = styled.div`
   display: flex;
@@ -57,4 +58,4 @@ export const SideBarSocial = styled.div`
   justify-content: space-between;
   padding: 2.8rem 0;
   min-height: 15.5rem;
-`
+`;
