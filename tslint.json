@@ -13,9 +13,10 @@
           false
       ],
       "no-console": [
-          false
+          true
       ],
-      "no-var-requires": false
+      "no-var-requires": false,
+      "quotemark": [true, "single", "jsx-double", "avoid-escape"]
   },
   "rulesDirectory": []
 }
