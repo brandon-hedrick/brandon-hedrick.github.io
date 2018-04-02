@@ -8,14 +8,19 @@ export const Wrapper = styled.div`
   justify-content: stretch;
 `;
 
-const Column = styled.div`
-  width: 100%;
-`;
-
-export const LightColumn = Column.extend`
+export const Primary = styled.main`
   padding: 8.25rem 4rem 4rem 7.25rem;
+  width: 50%;
 `;
 
-export const DarkColumn = Column.extend`
-  background-color: ${Colors.darkGrey}
+export const Secondary = styled.div`
+  background-color: ${Colors.darkGrey};
+  width: 50%;
+`;
+
+// to be imported as the default layout used at page level columns
+export const SplitColumn = styled.section`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
