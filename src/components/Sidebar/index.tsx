@@ -1,6 +1,7 @@
-import * as React from 'react'
-import { StyledGithubIcon, StyledTwitterIcon, StyleLinkedInIcon, SideBarWrapper, SideBarSocialWrapper, SideBarSocial }
- from './styled'
+import * as React from 'react';
+
+import { StyledGithubIcon, StyledTwitterIcon, StyleLinkedInIcon, SideBarWrapper, SideBarSocialWrapper, SideBarSocial,
+  } from './styled';
 
 const SideBar = () => (
   <SideBarWrapper>
@@ -18,6 +19,6 @@ const SideBar = () => (
       </SideBarSocial>
     </SideBarSocialWrapper>
   </SideBarWrapper>
-)
+);
 
-export default SideBar
+export default SideBar;
