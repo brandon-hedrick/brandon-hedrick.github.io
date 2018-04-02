@@ -10,7 +10,12 @@ const LightCol = () => (
     <HeaderLink>Header Navigation</HeaderLink>
     <PageTitle>Page Title</PageTitle>
     <PageSubtitle>Page Subtitle</PageSubtitle>
-    <Paragraph>Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a sagittis enim. Nullam venenatis gravida efficitur. Phasellus tortor eros, semper eu consequat sit amet, fringilla ac eros. Nullam a suscipit mauris. Suspendisse sem elit, rutrum eu ante id, facilisis faucibus quam. Fusce id leo vitae tortor laoreet accumsan. Sed pulvinar lobortis est, vitae venenatis nibh vestibulum a. Quisque gravida, nibh nec mollis imperdiet, metus mauris malesuada magna, sed tempor purus risus id velit.</Paragraph>
+    <Paragraph>Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a sagittis enim. Nullam 
+      venenatis gravida efficitur. Phasellus tortor eros, semper eu consequat sit amet, fringilla ac eros. Nullam a 
+      suscipit mauris. Suspendisse sem elit, rutrum eu ante id, facilisis faucibus quam. Fusce id leo vitae tortor 
+      laoreet accumsan. Sed pulvinar lobortis est, vitae venenatis nibh vestibulum a. Quisque gravida, nibh nec mollis 
+      imperdiet, metus mauris malesuada magna, sed tempor purus risus id velit.
+    </Paragraph>
   </div>
 )
 
