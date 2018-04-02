@@ -32,7 +32,7 @@ StyledTypography.pageTitle = `
 StyledTypography.pageSubtitle = `
   font-family: ${titillium}}};
   color: ${Colors.mediumGrey}}};
-  font-size: 3.5rem;
+  font-size: 3rem;
 `;
 
 StyledTypography.paragraph = `

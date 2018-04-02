@@ -5,7 +5,7 @@ import Link from 'gatsby-link';
 import { Colors } from '../../styles/colors';
 import { StyledTypography } from '../../styles/typography';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   width: 50%;

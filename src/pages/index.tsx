@@ -3,7 +3,20 @@ import styled from 'styled-components';
 
 import Img from 'gatsby-image';
 import SplitLayout from '../components/SplitLayout';
-import TitularLayout from '../components/TitularLayout';
+import MainContentSection from '../components/MainContentSection';
+
+const AboutPage: React.SFC<AboutPageProps> = ({ data }) => (
+  <SplitLayout
+  primary={
+    <Primary/>
+  }
+  secondary={
+    <Secondary heroImage={data.heroImage}/>
+  }
+  />
+);
+
+export default AboutPage;
 
 interface HeroImage {
   sizes: object;
@@ -21,28 +34,30 @@ interface DarkColProps {
 // to avoid linting error using mixed quotes in jsx  with ts
 const subtitle = 'I\'m a Javascript developer';
 
-const LightCol = () => (
-  <TitularLayout title={'About'} subtitle={subtitle}/>
+const Primary = () => (
+  <MainContentSection title={'About'} subtitle={subtitle}>
+    <p>
+      with a passion for creating stunning web apps using the latest technology. I strive to combine great UX with
+      great code to deliver the best experience to consumers of my applications.
+    </p>
+    <p>
+      I’ve been developing front end since 2012 when I learned HTML and CSS in an introductory course at Purdue
+      University. I quickly became obsessed with creativity I could express through my code and designs.
+    </p>
+    <p>
+      Upon graduating in 2014, I began work at a large scale digital consulting company where I was exposed to a whole
+      new world of web technolgies. Shortly after that I began to shift my creative focus from design and UX to a
+      passion for code.
+    </p>
+    <p>
+      Read more about what I’ve learned along the way.
+    </p>
+  </MainContentSection>
 );
 
-const DarkCol: React.SFC<DarkColProps> = ({ heroImage }) => (
-  <div>
-    <HeroImage sizes={heroImage.sizes} />
-  </div>
+const Secondary: React.SFC<DarkColProps> = ({ heroImage }) => (
+  <HeroImage sizes={heroImage.sizes} />
 );
-
-const AboutPage: React.SFC<AboutPageProps> = ({ data }) => (
-  <SplitLayout
-  light={
-    <LightCol/>
-  }
-  dark={
-    <DarkCol heroImage={data.heroImage}/>
-  }
-  />
-);
-
-export default AboutPage;
 
 export const query = graphql`
   query IndexQuery {

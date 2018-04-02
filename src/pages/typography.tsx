@@ -29,10 +29,10 @@ const DarkCol = () => (
 
 const TypographyPage = () => (
   <SplitLayout
-    light={
+    primary={
       <LightCol/>
     }
-    dark={
+    secondary={
       <DarkCol/>
     }
   />

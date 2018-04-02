@@ -1,16 +1,16 @@
 import * as React from 'react';
 
-import { Wrapper, LightColumn, DarkColumn } from './styled';
+import { Wrapper, Primary, Secondary } from './styled';
 
 interface SplitLayoutProps {
-  light: any;
-  dark: any;
+  primary: any;
+  secondary: any;
 }
 
-const SplitLayout: React.SFC<SplitLayoutProps> = ({ light, dark }) => (
+const SplitLayout: React.SFC<SplitLayoutProps> = ({ primary, secondary }) => (
   <Wrapper>
-    <LightColumn>{light}</LightColumn>
-    <DarkColumn>{dark}</DarkColumn>
+    <Primary>{primary}</Primary>
+    <Secondary>{secondary}</Secondary>
   </Wrapper>
 );
 
