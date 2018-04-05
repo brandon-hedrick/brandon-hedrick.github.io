@@ -17,7 +17,7 @@ const WorkPage = () => (
 export default WorkPage;
 
 const Primary = () => (
-  <MainContentSection title={'Work'} subtitle={'I like to make cool stuff'}>
+  <MainContentSection title={'Work'} subtitle={'I like to make cool stuff...'}>
     <p>
       With my current job, I’m not legally allowed to share any of the codeI’ve written or release any client
       information. With that said, I make all kinds of cool stuff in my free time.
