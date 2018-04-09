@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 import { Colors } from './colors';
 
-const butler = {
+export const butler = {
   black: 'butlerblack',
   medium: 'butlermedium',
 };
 
-const titillium = 'titilliumbold_upright';
+export const titillium = 'titilliumbold_upright';
 
 export const StyledTypography: any = {};
 
