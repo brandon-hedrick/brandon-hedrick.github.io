@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { StyledTypography } from '../../styles/typography';
 
 export const SkillsListWrapper = styled.div`
-  margin-bottom: 6rem;
 `;
 
 export const SkillsListTitle = styled.h4`

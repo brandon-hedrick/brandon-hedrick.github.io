@@ -1,7 +1,12 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 import SplitLayout from '../components/SplitLayout';
+import { SplitColumn } from '../components/SplitLayout/styled';
 import MainContentSection from '../components/MainContentSection';
+import GithubProjects from '../components/GithubProjects';
+
+import { StyledTypography } from '../styles/typography';
 
 const WorkPage = () => (
   <SplitLayout
@@ -19,7 +24,7 @@ export default WorkPage;
 const Primary = () => (
   <MainContentSection title={'Work'} subtitle={'I like to make cool stuff...'}>
     <p>
-      With my current job, I’m not legally allowed to share any of the codeI’ve written or release any client
+      With my current job, I’m not legally allowed to share any of the code I’ve written or release any client
       information. With that said, I make all kinds of cool stuff in my free time.
     </p>
     <p>
@@ -27,13 +32,26 @@ const Primary = () => (
       something fun. I even finished some of them too!
     </p>
     <p>
-      To the right you’ll find a list of projects from my Github. Feel free to check me out and see what I’ve been up to
+      Here you’ll find a list of projects from my Github. Feel free to check me out and see what I’ve been up to
       lately!
     </p>
   </MainContentSection>
 );
 
 const Secondary = () => (
-  <div>
-  </div>
+  <StyledSplitColumn>
+    <GithubProjectsTitle>I've Made...</GithubProjectsTitle>
+    <GithubProjects/>
+  </StyledSplitColumn>
 );
+
+const StyledSplitColumn = styled(SplitColumn)`
+  padding: 2rem 4rem 4rem;
+  overflow: auto;
+`;
+
+export const GithubProjectsTitle = styled.h4`
+  margin: 0;
+  margin-bottom: 4.375rem;
+  ${StyledTypography.darkTitle}
+`;

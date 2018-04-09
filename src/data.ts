@@ -54,6 +54,9 @@ export const skillsContent = [
         title: 'Yarn',
       },
       {
+        title: 'Continous Integration',
+      },
+      {
         href: 'https://www.styled-components.com/',
         title: 'Styled Components',
       },
