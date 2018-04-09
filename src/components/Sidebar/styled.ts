@@ -6,6 +6,7 @@ import GithubIcon from '../icons/GitHubIcon';
 import LinkedInIcon from '../icons/LinkedInIcon';
 import { Colors } from '../../styles/colors';
 import { StyledTypography } from '../../styles/typography';
+import { MobileLikeFormat } from '../../styles/breakpoints';
 
 // icon styling
 const svgStyling = `
@@ -29,6 +30,9 @@ export const SideBarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8.25rem 2.5rem 3rem;
+  ${MobileLikeFormat(`
+    display: none;
+  `)}
 `;
 
 export const SideBarSocialWrapper = styled.div`

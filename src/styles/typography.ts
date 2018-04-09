@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Colors } from './colors';
+import { MobileLikeFormat } from './breakpoints';
 
 export const butler = {
   black: 'butlerblack',
@@ -15,6 +16,9 @@ StyledTypography.logoTitle = `
   font-family: ${titillium};
   color: ${Colors.deepGrey};
   font-size: 2.25rem;
+  ${MobileLikeFormat(
+    `font-size: 4.5rem;`,
+  )}
 `;
 
 StyledTypography.headerNav = `
@@ -27,12 +31,19 @@ StyledTypography.pageTitle = `
   font-family: ${butler.black}}};
   color: ${Colors.lightGrey}}};
   font-size: 10rem;
+  ${MobileLikeFormat(
+    `color: ${Colors.deepGrey};
+    font-size: 8rem;`,
+  )}
 `;
 
 StyledTypography.pageSubtitle = `
   font-family: ${titillium}}};
   color: ${Colors.mediumGrey}}};
   font-size: 3rem;
+  ${MobileLikeFormat(
+    `font-size: 4rem;`,
+  )}
 `;
 
 StyledTypography.paragraph = `
@@ -40,6 +51,9 @@ StyledTypography.paragraph = `
   color: ${Colors.darkGrey}};
   font-size: 1.5rem;
   line-height: 150%;
+  ${MobileLikeFormat(
+    `font-size: 2.5rem;`,
+  )}
 `;
 
 StyledTypography.darkTitle = `
@@ -47,6 +61,9 @@ StyledTypography.darkTitle = `
   color: ${Colors.mediumGrey};
   font-size: 3.75rem;
   line-height: 100%;
+  ${MobileLikeFormat(
+    `font-size: 5rem;`,
+  )}
 `;
 
 StyledTypography.darkHeading = `
@@ -54,4 +71,7 @@ StyledTypography.darkHeading = `
   color: ${Colors.lightGrey};
   font-size: 3rem;
   letter-spacing: .15rem;
+  ${MobileLikeFormat(
+    `font-size: 4rem;`,
+  )}
 `;

@@ -4,11 +4,16 @@ import Link from 'gatsby-link';
 
 import { Colors } from '../../styles/colors';
 import { StyledTypography } from '../../styles/typography';
+import { MobileLikeFormat } from '../../styles/breakpoints';
 
 export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   width: 50%;
+  z-index: 5;
+  ${MobileLikeFormat(`
+    width: 100%;
+  `)}
 `;
 
 export const HeaderContent = styled.div`
@@ -18,6 +23,10 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   background-color: ${Colors.white};
   height: 6.25rem;
+  ${MobileLikeFormat(`
+    height: 8.25rem;
+    padding-left: 4rem;
+  `)}
 `;
 
 export const StyledLink = styled(Link)`

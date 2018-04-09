@@ -22,16 +22,9 @@
          url('butler_medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+} 
 
-body { 
+html {
     font-family: 'butlermedium';
-}
-
-  
-
-@media screen and (min-width: 1024px) {
-  html {
     font-size: calc(4px + 12 * (100vw / 1920));
-  }
 }

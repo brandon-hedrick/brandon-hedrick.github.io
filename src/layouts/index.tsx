@@ -7,6 +7,9 @@ import Sidebar from '../components/Sidebar';
 import './index.css';
 import '../assets/fonts/stylesheet.css';
 
+import styled from 'styled-components';
+import { MobileLikeFormat } from '../styles/breakpoints';
+
 interface TemplateWrapperProps {
   children: any;
 }
@@ -22,15 +25,19 @@ const TemplateWrapper: React.SFC<TemplateWrapperProps> = ({ children }) => (
     />
     <Header />
     <Sidebar />
-    <div
-      style={{
-        height: '100vh',
-        overflow: 'hidden',
-      }}
-    >
+    <MainContentWrapper>
       {children()}
-    </div>
+    </MainContentWrapper>
   </div>
 );
 
 export default TemplateWrapper;
+
+const MainContentWrapper = styled.div`
+  height: '100vh',
+  overflow: 'hidden',
+  ${MobileLikeFormat(`
+    height: auto;
+    overflow: auto;
+  `)}
+`;
