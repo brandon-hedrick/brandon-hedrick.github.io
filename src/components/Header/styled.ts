@@ -26,6 +26,7 @@ export const HeaderContent = styled.div`
   ${MobileLikeFormat(`
     height: 8.25rem;
     padding-left: 4rem;
+    border-bottom: 1px solid ${Colors.lightGrey};
   `)}
 `;
 
@@ -40,6 +41,9 @@ export const LogoTitle = StyledLink.extend`
 export const HeaderLink = StyledLink.extend`
   ${StyledTypography.headerNav}
   margin-left: 2.5rem;
+  ${MobileLikeFormat(`
+    display: none;
+  `)}
 `;
 
 // this could be done with props if I wasn't using gatsby-link and TS 😫
