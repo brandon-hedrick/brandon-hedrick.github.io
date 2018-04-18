@@ -11,6 +11,9 @@ export const HeaderContainer = styled.header`
   top: 0;
   width: 50%;
   z-index: 5;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
   ${MobileLikeFormat(`
     width: 100%;
   `)}
@@ -23,43 +26,18 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   background-color: ${Colors.white};
   height: 6.25rem;
+  flex-shrink: 0;
   ${MobileLikeFormat(`
     height: 8.25rem;
     padding-left: 4rem;
-    border-bottom: 1px solid ${Colors.lightGrey};
+    align-items: center;
+    border-bottom: 1px solid ${Colors.grey};
   `)}
 `;
 
-export const StyledLink = styled(Link)`
+export const LogoTitle = styled(Link)`
   text-decoration: none;
-`;
-
-export const LogoTitle = StyledLink.extend`
   ${StyledTypography.logoTitle}
-`;
-
-export const HeaderLink = StyledLink.extend`
-  ${StyledTypography.headerNav}
-  margin-left: 2.5rem;
-  ${MobileLikeFormat(`
-    display: none;
-  `)}
-`;
-
-// this could be done with props if I wasn't using gatsby-link and TS 😫
-export const FirstHeaderLink = HeaderLink.extend`
-  margin-left: 0;
-`;
-
-export const NavigationList = styled.ul`
-  list-style: none;
-  display: flex;
-  margin: 0;
-  justify-content: flex-end;
-`;
-
-export const NavigationListItem = styled.li`
-  margin: 0;
 `;
 
 export const LogoTitleWrapper = styled.h1`

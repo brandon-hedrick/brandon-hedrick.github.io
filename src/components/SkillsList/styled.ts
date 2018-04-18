@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { StyledTypography } from '../../styles/typography';
+import * as React from 'react';
 
 export const SkillsListWrapper = styled.div`
 `;

@@ -92,6 +92,7 @@ export const ProjectLinkToGH = styled.a`
   };
   ${MobileLikeFormat(`
     font-size: 2rem;
+    height: 5.8rem;
     padding: 2rem 2.5rem;
   `)}
 `;

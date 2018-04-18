@@ -30,9 +30,6 @@ export const SideBarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8.25rem 2.5rem 3rem;
-  ${MobileLikeFormat(`
-    display: none;
-  `)}
 `;
 
 export const SideBarSocialWrapper = styled.div`

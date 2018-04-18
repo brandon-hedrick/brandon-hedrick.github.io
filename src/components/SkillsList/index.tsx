@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { SkillsListTitle, StyledList, StyledItem , StyledAnchor} from './styled';
+import styled from 'styled-components';
 
 export interface SkillsListProps {
   title: string;
