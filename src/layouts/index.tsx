@@ -1,30 +1,78 @@
-import * as React from 'react'
-import { Helmet } from 'react-helmet'
+import * as React from 'react';
 
-import Header from '../components/Header'
-import './index.css'
+import { Helmet } from 'react-helmet';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
-)
+import './index.css';
+import '../assets/fonts/stylesheet.css';
 
-export default TemplateWrapper
+import styled from 'styled-components';
+import { MobileLikeFormat, ScreenResize } from '../styles/breakpoints';
+
+interface TemplateWrapperProps {
+  children: any;
+}
+
+interface TemplateWrapperState {
+  shouldRenderMobileLike?: boolean;
+}
+
+class TemplateWrapper extends React.Component<TemplateWrapperProps, TemplateWrapperState> {
+  private children: any;
+  private mobileLike$: any;
+
+  constructor(props: TemplateWrapperProps) {
+    super(props);
+    this.children = props.children;
+    this.state = {
+      shouldRenderMobileLike: false,
+    };
+  }
+
+  componentDidMount() {
+    this.mobileLike$ = ScreenResize
+      .resizeEvents()
+      .subscribe('shouldRenderMobileLike',
+        (shouldRenderMobileLike: boolean) => {
+          this.setState({ shouldRenderMobileLike });
+        }, true);
+  }
+
+  componentWillUnmount() {
+    this.mobileLike$.unsubscribe();
+  }
+
+  render() {
+    return (
+      <div>
+        <Helmet
+          title='Brandon Hedrick'
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        <Header />
+        {
+          !this.state.shouldRenderMobileLike &&
+          <Sidebar />
+        }
+        <MainContentWrapper>
+          {this.children()}
+        </MainContentWrapper>
+      </div>
+    );
+  }
+}
+
+export default TemplateWrapper;
+
+const MainContentWrapper = styled.div`
+  height: '100vh',
+  overflow: 'hidden',
+  ${MobileLikeFormat(`
+    height: auto;
+    overflow: auto;
+  `)}
+`;

@@ -4,11 +4,23 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@types/react-helmet": "^5.0.5",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
     "gatsby": "^1.9.241",
+    "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sharp": "^1.6.41",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-typescript": "^1.4.19",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-sharp": "^1.6.22",
     "react-helmet": "^5.2.0",
+    "styled-components": "^3.2.3",
     "typescript": "^2.8.1"
   },
   "keywords": [
@@ -19,9 +31,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "gh-pages": "^1.1.0",
+    "prettier": "^1.11.1",
+    "tslint": "^5.9.1"
   }
 }
