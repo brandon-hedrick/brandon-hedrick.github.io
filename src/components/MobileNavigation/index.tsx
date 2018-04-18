@@ -7,7 +7,7 @@ interface MobileNavigationProps {
   closeHandler: any;
 }
 
-class MobileNavigation extends React.Component<MobileNavigationProps, {}>{
+class MobileNavigation extends React.Component<MobileNavigationProps, {}> {
   render() {
     return(
       <MobileNavigationWrapper>
