@@ -1,0 +1,66 @@
+{
+  "assetsByChunkName": {
+    "path---typography": [
+      "path---typography-a0e39f21c11f6a62c5ab.js",
+      "path---typography-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-layouts-index-tsx": [
+      "component---src-layouts-index-tsx-9080d020af1a2f68cd72.js",
+      "component---src-layouts-index-tsx-9080d020af1a2f68cd72.js.map"
+    ],
+    "path---work": [
+      "path---work-a0e39f21c11f6a62c5ab.js",
+      "path---work-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-pages-work-tsx": [
+      "component---src-pages-work-tsx-29402903af430a8ec141.js",
+      "component---src-pages-work-tsx-29402903af430a8ec141.js.map"
+    ],
+    "path---index": [
+      "path---index-bb0f2f72c00e5fda715a.js",
+      "path---index-bb0f2f72c00e5fda715a.js.map"
+    ],
+    "path---skills": [
+      "path---skills-a0e39f21c11f6a62c5ab.js",
+      "path---skills-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "commons": [
+      "commons-90f51edaed03977bfe5f.js",
+      "commons-90f51edaed03977bfe5f.js.map"
+    ],
+    "component---src-pages-404-tsx": [
+      "component---src-pages-404-tsx-c3f1179ef31e3033d235.js",
+      "component---src-pages-404-tsx-c3f1179ef31e3033d235.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-skills-tsx": [
+      "component---src-pages-skills-tsx-84b324cc8e3e003d5b31.js",
+      "component---src-pages-skills-tsx-84b324cc8e3e003d5b31.js.map"
+    ],
+    "component---src-pages-index-tsx": [
+      "component---src-pages-index-tsx-b587dbb08c77dc8be81d.js",
+      "component---src-pages-index-tsx-b587dbb08c77dc8be81d.js.map"
+    ],
+    "app": [
+      "app-e45cb24ac197a089175f.js",
+      "build-js-styles.css",
+      "app-e45cb24ac197a089175f.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-typography-tsx": [
+      "component---src-pages-typography-tsx-371061771fce132143f0.js",
+      "component---src-pages-typography-tsx-371061771fce132143f0.js.map"
+    ]
+  }
+}
