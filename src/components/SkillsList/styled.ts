@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { StyledTypography } from '../../styles/typography';
+import * as React from 'react';
 
 export const SkillsListWrapper = styled.div`
 `;
@@ -11,17 +12,19 @@ export const SkillsListTitle = styled.h4`
 `;
 
 export const StyledList = styled.ul`
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   margin: 0;
 `;
 
 export const StyledItem = styled.li`
   list-style: none;
   ${StyledTypography.darkHeading}
-  padding: 1.25rem 0;
+  padding: 2rem 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0;
 `;
 
 export const StyledAnchor = styled.a`

@@ -4,19 +4,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import SplitLayout from '../components/SplitLayout';
 import MainContentSection from '../components/MainContentSection';
-
-const AboutPage: React.SFC<AboutPageProps> = ({ data }) => (
-  <SplitLayout
-  primary={
-    <Primary/>
-  }
-  secondary={
-    <Secondary heroImage={data.heroImage}/>
-  }
-  />
-);
-
-export default AboutPage;
+import { ScreenResize } from '../styles/breakpoints';
 
 interface HeroImage {
   sizes: object;
@@ -27,7 +15,53 @@ interface AboutPageProps {
   };
 }
 
-interface DarkColProps {
+interface AboutPageState {
+  shouldRenderMobileLike: boolean;
+}
+
+class AboutPage extends React.Component<AboutPageProps, AboutPageState> {
+
+  private mobileLike$: any;
+
+  constructor(props: AboutPageProps) {
+    super(props);
+
+    this.state = {
+      shouldRenderMobileLike: false,
+    };
+  }
+
+  componentDidMount() {
+    this.mobileLike$ = ScreenResize
+      .resizeEvents()
+      .subscribe('shouldRenderMobileLike',
+        (shouldRenderMobileLike: boolean) => {
+          this.setState({ shouldRenderMobileLike });
+        }, true);
+  }
+
+  componentWillUnmount() {
+    this.mobileLike$.unsubscribe();
+  }
+
+  render() {
+    return (
+      <SplitLayout
+        primary={
+          <Primary/>
+        }
+        secondary={
+          !this.state.shouldRenderMobileLike &&
+          <Secondary heroImage={this.props.data.heroImage}/>
+        }
+      />
+    );
+  }
+}
+
+export default AboutPage;
+
+interface SecondaryProps {
   heroImage: HeroImage;
 }
 
@@ -55,7 +89,7 @@ const Primary = () => {
   );
 };
 
-const Secondary: React.SFC<DarkColProps> = ({ heroImage }) => (
+const Secondary: React.SFC<SecondaryProps> = ({ heroImage }) => (
   <HeroImage sizes={heroImage.sizes} />
 );
 

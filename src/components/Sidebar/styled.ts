@@ -6,6 +6,7 @@ import GithubIcon from '../icons/GitHubIcon';
 import LinkedInIcon from '../icons/LinkedInIcon';
 import { Colors } from '../../styles/colors';
 import { StyledTypography } from '../../styles/typography';
+import { MobileLikeFormat } from '../../styles/breakpoints';
 
 // icon styling
 const svgStyling = `
